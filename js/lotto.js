@@ -31,8 +31,8 @@ function onLotto () {
 		else if(numbers[i] <= 40) {color ='grey'}
 		else {color ='green'}
 		$('.disp-wrapper .display').append('<li class="ball '+color+'">'+numbers[i]+'</li>');
-		}
-		// 부호 잘 확인하기
+		}// 부호 잘 확인하기
 
-
+	$('.history-wrapper').prepend( $('.disp-wrapper .display').clone() )
+	// 기록 남기기
 }	
