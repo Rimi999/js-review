@@ -27,13 +27,12 @@ function onLotto () {
 	for(i=0; i<6; i++) {
 		if(numbers[i] <= 10) {color ='yellow'}
 		else if(numbers[i] <= 20) {color ='blue'}
-		else if(numbers[i] <= 10) {color ='red'}
-		else if(numbers[i] <= 10) {color ='grey'}
+		else if(numbers[i] <= 30) {color ='red'}
+		else if(numbers[i] <= 40) {color ='grey'}
 		else {color ='green'}
-		$('.disp-wrapper .display').append(
-			'<li class="ball" '+color+'"> '+numbers[i]+' <li>')
-			// 부호 잘 확인하기
-	}
+		$('.disp-wrapper .display').append('<li class="ball '+color+'">'+numbers[i]+'</li>');
+		}
+		// 부호 잘 확인하기
 
 
 }	
