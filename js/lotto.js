@@ -6,9 +6,17 @@
 
 /***************** 이벤트 등록 *******************/
 $('#bt-lotto').on('click', onLotto)
+$('#bt-reset').on('click', onReset)
 
 
 /***************** 이벤트 콜백 *******************/
+function onReset() {
+	$('.disp-wrapper .display').empty()
+	$('.history-wrapper').empty()
+}
+
+
+
 function onLotto () {
 	var numbers = [], n, i, color //변수 선언
 
