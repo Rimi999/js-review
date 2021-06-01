@@ -35,3 +35,7 @@ button:hover {background-color: #ccc;}
 	.green {
 		background-image: radial-gradient(at 35% 25%, #84ff7f 10%, #51da02 50%, #064400 100%);}
 
+
+@media (max-width: 768px){
+	.history-wrapper > .display {width: 100%;}
+}
