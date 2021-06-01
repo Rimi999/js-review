@@ -19,7 +19,7 @@ button:hover {background-color: #ccc;}
 .history-wrapper > .display {width: 50%; float: left; margin: 0.5em 0; text-align: center;}
 
 
-.ball{width: 40%; height: 40px; border-radius: 50%; text-shadow: 0 0 4px rgba(0,0,0, .4);
+.ball{width: 40px; height: 40px; border-radius: 50%; text-shadow: 0 0 4px rgba(0,0,0, .4);
 	text-align: center; padding-right: 2px; display: inline-block; margin-right: 4px;
 	color: #fff; font-weight: bold; font-size: 1.25em;
 	line-height: 37px; letter-spacing: -2px;}
