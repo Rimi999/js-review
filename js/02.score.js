@@ -3,7 +3,26 @@ var scores = []
 
 
 /***************** 사용자 함수 *******************/
-
+function scoreRender() {
+	//테이블에 점수 등록
+	var i,html
+	for(i=0; i<scores.length;i++){
+		html  = '<tr>'
+		html += '<td>'+(i+1)+'</td>'
+		html += '<td>'+scores[i].name+'</td>'
+		html += '<td>'+scores[i].kor+'점</td>'
+		html += '<td>'+scores[i].eng+'점</td>'
+		html += '<td>'+scores[i].math+'점</td>'
+		html += '<td>'+scores[i].total+'점</td>'
+		html += '<td>'+scores[i].avg+'점</td>'
+		html += '<td>등</td>'
+		html += '<td>'
+		html += '<button class="bt-change">수정</button>'
+		html += '<button class="bt-remove">삭제</button>'
+		html += '</td>'
+		$('.score-tb tbodt').append(html)
+	}
+}
 
 /***************** 이벤트 등록 *******************/
 
@@ -55,6 +74,10 @@ function onScoreSubmit(f) {
 
 	//form 초기화
 	f.reset()
+
+	// 데이터를 화면에 표현
+	scoreRender()
+
 
 	return false
 
