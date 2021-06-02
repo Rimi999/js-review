@@ -11,8 +11,8 @@ var scores = []
 /***************** 이벤트 콜백 *******************/
 function onScoreSubmit(f) {
 	// var f = document.scoreFom으로 접근가능
-	var	name = f.name.value.trim() //trim 공백제거
-	var	kor = f.kor.value.trim()
+	var	name = f.name.value.trim() //trim 공백제거 
+	var	kor = f.kor.value.trim()   //문자열 안에있는 공백은 X
 	var	eng = f.eng.value.trim()
 	var	math = f.math.value.trim()
 	if(name ===''){
@@ -30,5 +30,14 @@ function onScoreSubmit(f) {
 		f.eng.focus()
 		return false
 	}
+	//검증완료후 숫자로 변환
+	kor = Number(kor)
+	eng = Number(eng)
+	math = Number(math)
+	total = kor + eng + math
+	avg = Number( (total/3).toFixed(2) )
+
+
 	return false
+
 }
