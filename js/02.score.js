@@ -17,7 +17,7 @@ function onScoreSubmit(f) {
 	var	math = f.math.value
 	if(name ===''){
 		alert('이름을 입력하세요.')
-		return false
+		return false //중복 알림이 안 뜨도록
 	}
 	if(kor ===''){
 		alert('국어 점수를 입력하세요.')
