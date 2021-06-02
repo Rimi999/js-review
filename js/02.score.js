@@ -37,6 +37,14 @@ function onScoreSubmit(f) {
 	total = kor + eng + math
 	avg = Number( (total/3).toFixed(2) )
 
+	//배열에 넣기
+	scores.push({
+		name: name
+		kor: kor,
+		math: math,
+		total: total,
+		avg: avg
+	})
 
 	return false
 
