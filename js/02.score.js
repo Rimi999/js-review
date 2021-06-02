@@ -39,12 +39,14 @@ function onScoreSubmit(f) {
 
 	//배열에 넣기
 	scores.push({
-		name: name
+		name: name,
 		kor: kor,
 		math: math,
 		total: total,
 		avg: avg
 	})
+
+	f.reset() //입력 후 값 지우기
 
 	return false
 
