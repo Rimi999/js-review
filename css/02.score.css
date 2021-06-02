@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&family=Sunflower:wght@300&display=swap');
+/* font-family: 'Noto Serif KR', serif;
+	 font-family: 'Sunflower', sans-serif; */
+
+html, body {font-family: 'Sunflower', sans-serif; font-weight: 300;}
+
+.wrapper {max-width: 1200px; margin: 0 auto;}
+.title {font-family: 'Noto Serif KR', serif; font-weight: 500;}
+h1.title {text-align: center; font-size: 2em; padding: 2em 0;}
+
+button,input {padding: 0.75em 1.25em; border: 1px solid #6887a5;}
+button:hover {background-color: #3c5268; color: #fff;}
+input {padding: calc(0.75 - 2px) 1.25em;}
+
+
+.score-form {margin-bottom: 1.5em;}
+.score-form input {width: 90px;}
+.score-form input[name='name'] {width: 120px;}
+.score-form button .bt-subit {}
+
+
+
+
+
+.score-tb {width: 100%; text-align: center; border-top: 1px solid #ccc;}
+.score-tb th {border-bottom: 3px double #6887a5; padding: 0.75em 0;}
+
+
+.score-tb th:nth-child(1) {width: 7;}
+.score-tb th:nth-child(3) {width: 12;}
+.score-tb th:nth-child(4) {width: 12;}
+.score-tb th:nth-child(5) {width: 12;}
+.score-tb th:nth-child(6) {width: 12;}
+.score-tb th:nth-child(7) {width: 12;}
+.score-tb th:nth-child(8) {width: 12;}
+.score-tb th:nth-child(9) {width: 5;}
