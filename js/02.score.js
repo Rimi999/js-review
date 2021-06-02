@@ -11,10 +11,14 @@ var scores = []
 /***************** 이벤트 콜백 *******************/
 function onScoreSubmit(f) {
 	// var f = document.scoreFom으로 접근가능
+
+	//데이터 저장
 	var	name = f.name.value.trim() //trim 공백제거 
 	var	kor = f.kor.value.trim()   //문자열 안에있는 공백은 X
 	var	eng = f.eng.value.trim()
 	var	math = f.math.value.trim()
+	
+	//데이터 검증
 	if(name ===''){
 		alert('이름을 입력하세요.')
 		f.name.focus()
@@ -30,6 +34,8 @@ function onScoreSubmit(f) {
 		f.eng.focus()
 		return false
 	}
+
+	//데이터 수정
 	//검증완료후 숫자로 변환
 	kor = Number(kor)
 	eng = Number(eng)
@@ -37,7 +43,8 @@ function onScoreSubmit(f) {
 	total = kor + eng + math
 	avg = Number( (total/3).toFixed(2) )
 
-	//배열에 넣기
+
+	//배열에 데이터 저장
 	scores.push({
 		name: name,
 		kor: kor,
@@ -46,7 +53,8 @@ function onScoreSubmit(f) {
 		avg: avg
 	})
 
-	f.reset() //입력 후 값 지우기
+	//form 초기화
+	f.reset()
 
 	return false
 
