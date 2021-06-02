@@ -16,7 +16,10 @@ input {padding: calc(0.75 - 2px) 1.25em;}
 .score-form {margin-bottom: 1.5em;}
 .score-form input {width: 90px;}
 .score-form input[name='name'] {width: 120px;}
-.score-form button .bt-subit {margin-left: 1em;}
+
+.score-form button.bt-submit {margin-left: 1em;}
+.score-form button.bt-reset {border: 1px solid orange;}
+.score-form button.bt-reset:hover {background-color: rgb(247, 198, 107);}
 
 
 .score-tb {width: 100%; text-align: center; border-top: 1px solid #ccc;}
