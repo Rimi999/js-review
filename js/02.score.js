@@ -5,9 +5,10 @@ var scores = []
 /***************** 사용자 함수 *******************/
 function scoreRender() {
 	//테이블에 점수 등록
-	var i,html
-	for(i=0; i<scores.length;i++){
-		html  = '<tr>'
+	var i, html
+	$('.score-tb tbody').empty()
+	for(i=0; i<scores.length; i++) {
+		html = '<tr>'
 		html += '<td>'+(i+1)+'</td>'
 		html += '<td>'+scores[i].name+'</td>'
 		html += '<td>'+scores[i].kor+'점</td>'
@@ -20,9 +21,11 @@ function scoreRender() {
 		html += '<button class="bt-change">수정</button>'
 		html += '<button class="bt-remove">삭제</button>'
 		html += '</td>'
-		$('.score-tb tbodt').append(html)
+		html += '</tr>'
+		$('.score-tb tbody').append(html)
 	}
 }
+
 
 /***************** 이벤트 등록 *******************/
 
@@ -38,17 +41,17 @@ function onScoreSubmit(f) {
 	var	math = f.math.value.trim()
 	
 	//데이터 검증
-	if(name ===''){
+	if(name === ''){
 		alert('이름을 입력하세요.')
 		f.name.focus()
-		return false //중복 알림이 안 뜨도록
+		return false //중복 알림창이 안 뜨도록
 	}
-	if(kor ===''){
+	if(kor === ''){
 		alert('국어 점수를 입력하세요.')
 		f.kor.focus()
 		return false
 	}
-	if(eng ===''){
+	if(eng === ''){
 		alert('영어 점수를 입력하세요.')
 		f.eng.focus()
 		return false
@@ -78,7 +81,5 @@ function onScoreSubmit(f) {
 	// 데이터를 화면에 표현
 	scoreRender()
 
-
 	return false
-
 }
