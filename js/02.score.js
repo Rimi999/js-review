@@ -48,7 +48,7 @@ function rankingScore() {
 
 function rankingScore(){
 	scores.sort(sortDesc('total')).forEach(function(v, i){
-		v.rank = (i === 0) ? 1 : (scores[i-1].total === v.total) ? scores[i-1].rank : i +1 
+		v.rank = (i === 0) ? 1 : (scores[i-1].total === v.total) ? scores[i-1].rank : i + 1 
 	})
 	scores.sort(sortAsc('createdAt'))
 }
@@ -66,7 +66,7 @@ function renderScore() {
 		html += '<td>'+scores[i].math+'점</td>'
 		html += '<td>'+scores[i].total+'점</td>'
 		html += '<td>'+scores[i].avg+'점</td>'
-		html += '<td>등</td>'
+		html += '<td>'+scores[i].rank+'등</td>'
 		html += '<td>'
 		html += '<button class="bt-change">수정</button>'
 		html += '<button class="bt-remove">삭제</button>'
