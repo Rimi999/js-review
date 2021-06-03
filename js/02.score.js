@@ -3,8 +3,54 @@ var scores = []
 
 
 /***************** 사용자 함수 *******************/
+/*
+if(scores[i-1].total === v.total) v.rank = scores[i-1].rank
+	else v.rank = i + 1
+	if(i == 0) v.rank = 1
+	else v.rank = scores[i-1].total === v.total ? scores[i-1].rank : i + 1
+
+*/
+
+/*
+**** 축약 과정 ****
+function rankingScore() {
+	scores.sort (function(a, b) {
+		return b.total - a.total
+	})
+	scores.forEach(function(v, i) {
+		if(i === 0) v.rank = 1
+		else {
+			if(v.total === scores[i - 1].total) v.rank = scores[i - 1].rank
+			else v.rank = i + 1
+		}
+	})
+}
+
+function rankingScore() {
+	scores.sort (sorDesc('total'))
+	scores.forEach (function(v, i){
+		if(i === 0) v.rank = 1
+		else {
+			v.rank = (v.total === scores[i - 1].total) ? scores[i - 1].rank : v.rank = i + 1
+		}
+	})
+}
+
+function rankingScore() {
+	scores.sort (sorDesc('total'))
+	scores.forEach (function(v, i){
+		v.rank = (i === 0) ? 1 : (v.total === scores[i - 1].total) ? scores[i - 1].rank : i + 1
+		}
+	})
+}
+*/
+
+
 function rankingScore(){
-	scores.sort(sortDesc('total'))
+	scores.sort(sortDesc('total')).forEach(function(v, i){
+		v.rank = (i === 0) ? 1 : (scores[i-1].total === v.total) ? scores[i-1].rank : i +1 
+	})
+	scores.sort(sortAsc('createdAt'))
 }
 
 function renderScore() {
