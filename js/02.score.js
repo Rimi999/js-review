@@ -39,6 +39,7 @@ function onScoreSubmit(f) {
 	var	kor = f.kor.value.trim()   //문자열 안에있는 공백은 X
 	var	eng = f.eng.value.trim()
 	var	math = f.math.value.trim()
+	var createdAt = new Date().getTime()
 	
 	//데이터 검증
 	if(name === ''){
@@ -72,7 +73,8 @@ function onScoreSubmit(f) {
 		kor: kor,
 		math: math,
 		total: total,
-		avg: avg
+		avg: avg,
+		createdAt: createdAt
 	})
 
 	//form 초기화
