@@ -3,6 +3,10 @@ var scores = []
 
 
 /***************** 사용자 함수 *******************/
+function rankingScore(){
+	scores.sort(sortDesc('total'))
+}
+
 function renderScore() {
 	//테이블에 점수 등록
 	var i, html
