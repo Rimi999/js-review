@@ -27,3 +27,17 @@ $('.bt-fade-out').on('click', function() {
 $('.bt-fade-toggle').on('click',function() {
 	$('.hero').stop().fadeToggle()
 })
+
+
+/**** slide ****/
+$('.bt-slide-down').click(function() {
+	$('.hero').stop().slideDown()
+})
+
+$('.bt-slide-up').on('click', function() {
+	$('.hero').stop().slideUp()
+})
+
+$('.bt-slide-toggle').on('click',function() {
+	$('.hero').stop().slideToggle()
+})
