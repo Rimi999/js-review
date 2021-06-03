@@ -72,8 +72,11 @@ function renderScore() {
 		html += '<button class="bt-remove">삭제</button>'
 		html += '</td>'
 		html += '</tr>'
-		$('.score-tb tbody').append(html)
+		$('.score-tb tbody').prepend(html)
 	}
+	$('.score-tb tbody tr').stop().fadeOut(0, function() {
+		$(this).stop().fadeIn(1000)
+	})
 }
 
 
