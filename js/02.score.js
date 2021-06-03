@@ -3,7 +3,7 @@ var scores = []
 
 
 /***************** 사용자 함수 *******************/
-function scoreRender() {
+function renderScore() {
 	//테이블에 점수 등록
 	var i, html
 	$('.score-tb tbody').empty()
@@ -80,8 +80,11 @@ function onScoreSubmit(f) {
 	//form 초기화
 	f.reset()
 
+	//데이터 순위 정하기
+	rankingScore()
+
 	// 데이터를 화면에 표현
-	scoreRender()
+	renderScore()
 
 	return false
 }
