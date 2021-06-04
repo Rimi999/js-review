@@ -1,0 +1,12 @@
+
+.wrapper {max-width: 1000px; margin: auto; padding: 1em;}
+
+.header-wrapper {background-color: #222; color:#fff}
+.header-wrapper	> .logo {float: left;}
+
+.navi-wrapper {float: right;}
+.navi-wrapper	.navi {float: left; position: relative;}
+.navi-wrapper	.sub-wrap {position: absolute; background-color: #222; width: 100%; }
+.navi-wrapper	.sub:hover {background-attachment: #555;}
+
+.header-wrapper span {display: inline-block; padding: 1em; cursor:pointer}
