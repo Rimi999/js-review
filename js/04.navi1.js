@@ -15,7 +15,7 @@ $('.hover-navi').on('mouseleave', onNaviLeave)
 /******************** 이벤트 콜백 *********************/
 function onNaviClick() {
 	// $(this).next().stop().slidToggle(300)
-	$(this).parent().find('.sub-wrap').stop().slideDown(300)
+	$(this).parent().find('.sub-wrap').stop().slideToggle(300)
 }
 
 function onNaviHover() {
