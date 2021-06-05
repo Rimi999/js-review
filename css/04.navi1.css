@@ -4,6 +4,8 @@
 .header-wrapper {background-color: #222; color:#fff}
 .header-wrapper	> .logo {float: left; font-weight: bold; padding: 1em;}
 
+.header-wrapper span {display: inline-block; padding: 1em; cursor:pointer}
+
 .header-wrapper .navi-wrapper {float: right;}
 .navi-wrapper	.navi {float: left; position: relative;}
 .navi-wrapper	.navi:hover {background-color: #ddd; color: #111;}
@@ -11,5 +13,3 @@
 .navi-wrapper .sub-wrap {position: absolute; background-color: #ddd; width: 100%; }
 .navi-wrapper .sub {padding: .75em; text-align: center;}
 .navi-wrapper .sub:hover {color:orange;}
-
-.header-wrapper span {display: inline-block; padding: 1em; cursor:pointer}
