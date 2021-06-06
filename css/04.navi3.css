@@ -6,11 +6,12 @@
 
 .header-wrapper span {display: inline-block; padding: 1em; cursor:pointer}
 
-.navi-wrapper {float: right; position: relative;}
+.navi-wrapper {float: right;}
 .navi-wrapper	.navi {float: left; width: 160px;}
 .navi-wrapper	.navi:hover {background-color: #ddd; color: #111;}
 
-.navi-wrapper .sub-wrapper {position: absolute; top: 48px; left: 0; color: #111; width: 100%;}
-.navi-wrapper .sub-wrapper .sub-wrap {width: 33.333334%; float: left;}
-.navi-wrapper .sub-wrapper .sub {background-color: #ddd; padding: 1em;}
-.navi-wrapper .sub-wrapper .sub:hover {color:orange;} 
+.header-wrapper .sub-wrapper {position: absolute; top: 48px; left: 0; color: #111; width: 100%;}
+.header-wrapper .sub-wrapper .sub-wraps {width: 480%; margin-left: auto;}
+.header-wrapper .sub-wrapper .sub-wrap {width: 30%; float: left;}
+.header-wrapper .sub-wrapper .sub {background-color: #ddd; padding: 1em;}
+.header-wrapper .sub-wrapper .sub:hover {color:orange;} 

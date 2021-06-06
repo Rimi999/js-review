@@ -5,15 +5,21 @@ $('.sub-wrapper').slideUp(0)
 
 
 /******************** 이벤트 등록 *********************/
+// $('.header-wrapper').on('mouseenter', onHeaderEnter)
+
 $('.navi-wrapper').on('mouseenter', onNaviEnter)
-$('.navi-wrapper').on('mouseleave', onNaviLeave)
+$('.header-wrapper').on('mouseleave', onHeaderLeave)
 
 
 /******************** 이벤트 콜백 *********************/
+// function onHeaderEnter() {
+// 	$(this).find('.sub-wrapper').stop().slideDown(500)
+// }
+
 function onNaviEnter() {
-	$(this).find('.sub-wrapper').stop().slideDown(500)
+	$(this).next().stop().slideDown(500)
 }
 
-function onNaviLeave() {
+function onHeaderLeave() {
 	$(this).find('.sub-wrapper').stop().slideUp(300)
 }
