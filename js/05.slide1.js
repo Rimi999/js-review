@@ -16,14 +16,25 @@ console.log(++i) // 3
 */
 
 /*************** 글로벌 설정 *****************/
-
+var idx = 0  //현재 맨 위에 나타나는 .slide의 index
+var zIdx = 2 //맨 위에 나타나는 .slide의 z-index
+$('.slide-wrap .slide').eq(idx).css('z-index', zIdx++)
 
 
 /*************** 사용자 함수 *****************/
 
 
 /*************** 이벤트 등록 *****************/
+$('slide-stage .bt-prev').on('click', onPrevClick)
+$('slide-stage .bt-next').on('click', onNextClick)
 
 
 /*************** 이벤트 콜백 *****************/
+function onPrevClick(){
 
+}
+
+function onNextClick(){
+	if(idx == 5) idx = 0
+	('.slide-wrap .slide').eq(idx).css('z-index', zIdx++)
+}
