@@ -8,8 +8,6 @@ function init() {
 	$('.slide-wrap').append( $('.slide-wrap > .slide').eq(0).clone() )
 	len = $('.slide-wrap .slide').length
 	lastIdx = len - 1
-	$('.slide-wrap').css('width', (len*100)+'%')
-	$('.slide-wrap > .slide').css('width', (100/len)+'%')
 }
 
 
@@ -22,17 +20,17 @@ $('.bt-next').on('click', onNext)
 function onPrev() {
 	if(idx === 0) {
 		idx = lastIdx - 1
-		$('.slide-wrap').css('left', -(lastIdx * 100)+'%')
+		$('.slide-wrap').css('top', -(lastIdx * 100)+'%')
 	}
 	else idx--
-		$('.slide-wrap').stop().animate({'left': -(idx * 100)+'%'}, 500)
+		$('.slide-wrap').stop().animate({'top': -(idx * 100)+'%'}, 500)
 }
 
 function onNext() {
 	if (idx === lastIdx) {
 		idx = 1 //0은 보이고 있는 상태라 한번 멈춤
-		$('.slide-wrap').css('left', 0)
+		$('.slide-wrap').css('top', 0)
 	}
 	else idx++
-	$('.slide-wrap').stop().animate({'left': -(idx * 100)+'%'}, 500)
+	$('.slide-wrap').stop().animate({'top': -(idx * 100)+'%'}, 500)
 }
