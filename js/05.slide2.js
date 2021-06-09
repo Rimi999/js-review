@@ -1,6 +1,10 @@
 /*************** 글로벌 설정 *****************/
 var idx = 0
-var lastIdx = $('.slide-wrap .slide').length - 1
+var len = $('.slide-wrap .slide').length
+var lastIdx = len - 1
+$('.slide-wrap').css('width', (len*100)+'%')
+$('.slide-wrap > .slide').css('width', (100/len)+'%')
+
 
 /*************** 사용자 함수 *****************/
 
