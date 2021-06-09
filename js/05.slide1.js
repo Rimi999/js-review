@@ -36,5 +36,6 @@ function onPrevClick(){
 
 function onNextClick(){
 	if(idx == 5) idx = 0
+	else idx++
 	('.slide-wrap .slide').eq(idx).css('z-index', zIdx++)
 }
