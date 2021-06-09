@@ -13,10 +13,12 @@ var i=0
 console.log(++i) // 1
 console.log(++i) // 2
 console.log(++i) // 3
-*/
-/*
 
+// 삼항 연산자
+a = (조건)? 값1  : 값2
+조건(참) : a = 값1, 조건(거짓) : a = 값2
 */ 
+
 /*************** 글로벌 설정 *****************/
 var idx = 0  //현재 맨 위에 나타나는 .slide의 index
 var zIdx = 2 //맨 위에 나타나는 .slide의 z-index
@@ -34,13 +36,11 @@ $('slide-stage .bt-next').on('click', onNextClick)
 
 /*************** 이벤트 콜백 *****************/
 function onPrevClick(){
-	if(idx === 0) idx = lastIdx
-	else idx--
+	idx = (idx === 0) ? lastIdx : idx - 1
 	('.slide-wrap .slide').eq(idx).css('z-index', zIdx++)
 }
 
 function onNextClick(){
-	if(idx === lastIdx) idx = 0
-	else idx++
+	idx = (idx === lastIdx)? 0 : idx + 1
 	('.slide-wrap .slide').eq(idx).css('z-index', zIdx++)
 }
