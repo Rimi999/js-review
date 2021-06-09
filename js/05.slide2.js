@@ -1,12 +1,16 @@
 /*************** 글로벌 설정 *****************/
-var idx = 0
-var len = $('.slide-wrap .slide').length
-var lastIdx = len - 1
-$('.slide-wrap').css('width', (len*100)+'%')
-$('.slide-wrap > .slide').css('width', (100/len)+'%')
+var idx = 0, len, lastId
+init()
 
 
 /*************** 사용자 함수 *****************/
+function init() {
+	$('.slide-wrap').append( $('.slide-wrap > .slide').eq(0).clone() )
+	len = $('.slide-wrap .slide').length
+	lastIdx = len - 1
+	$('.slide-wrap').css('width', (len*100)+'%')
+	$('.slide-wrap > .slide').css('width', (100/len)+'%')
+}
 
 
 /*************** 이벤트 등록 *****************/
