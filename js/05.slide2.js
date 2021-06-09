@@ -15,6 +15,12 @@ function onPrev() {
 
 }
 function onNext() {
-	idx = (idx === 4)? 0 : idx + 1
-	$('.slide-wrap').stop().animate({'left':(idx*-100)+'%'}, 1000)
+	if (idx === 4) {
+		idx = 1 //0은 보이고 있는 상태라 한번 멈춤
+		$('.slide-wrap').css('left', 0)
+	}
+	else {
+		idx++
+	}
+	$('.slide-wrap').stop().animate({'left': -(idx * 100)+'%'}, 1000)
 }
