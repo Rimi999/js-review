@@ -31,11 +31,13 @@ $('slide-stage .bt-next').on('click', onNextClick)
 
 /*************** 이벤트 콜백 *****************/
 function onPrevClick(){
-
+	if(idx === 0) idx = 5
+	else idx--
+	('.slide-wrap .slide').eq(idx).css('z-index', zIdx++)
 }
 
 function onNextClick(){
-	if(idx == 5) idx = 0
+	if(idx === 5) idx = 0
 	else idx++
 	('.slide-wrap .slide').eq(idx).css('z-index', zIdx++)
 }
