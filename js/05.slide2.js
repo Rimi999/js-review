@@ -1,5 +1,5 @@
 /*************** 글로벌 설정 *****************/
-var idx = 0, len, lastId
+var idx = 0, len, lastIdx
 init()
 
 
