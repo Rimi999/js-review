@@ -8,6 +8,8 @@ function init() {
 
 /*************** 이벤트 등록 *****************/
 $('.bt-close').click(onModalHide)
+$('.bt-open').click(onModalShow)
+
 
 /*************** 이벤트 콜백 *****************/
 function onModalShow() {
@@ -19,5 +21,7 @@ function onModalShow() {
 }
 
 function onModalHide() {
-	$('.modal-wrapper').hide()
+	$('.modal-wrapper').attr('style','')
+	$('.modal-wrapper .modal-wrap').attr('style','')
+	//.attr()스타일 속성에 접근
 }
