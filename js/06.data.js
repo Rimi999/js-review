@@ -1,7 +1,7 @@
 /*************** 글로벌 설정 *****************/
 var prds        // 상품 리스트 (배열)
 var $listWrap   // $('.list-wrap')
-var $lisr       // $('.list-wrap > .list')
+var $list       // $('.list-wrap > .list')
 init()
 
 
@@ -16,16 +16,26 @@ function init(){
 		{ id: 1, src: '../img/steak.jpg', title: '맛있는 스테이크', desc: '스테이크'},
 		{ id: 1, src: '../img/wine.jpg', title: '맛있는 와인', desc: '와인'}
 	]
+	$listWrap = $('.list-wrap')
 }
 
+
 /*************** 이벤트 등록 *****************/
-$('.bt-create').clik(onCreate)
-$('.bt-remove').clik(onRemove)
+$('.bt-create').click(onCreate)
+$('.bt-remove').click(onRemove)
 
 
 /*************** 이벤트 콜백 *****************/
 function onCreate() {
-
+	var html
+	html += '<li class="list card">'
+	html += '<img class="card-img-top" src="../img/300.png">'
+	html += '<div class="card-body">'
+	html += '<h4 class="card-title">Title</h4>'
+	html += '<p class="card-text">Text</p>'
+	html += '</div>'
+	html += '</li>'
+	$listWrap.append(html)
 }
 
 function onRemove() {
