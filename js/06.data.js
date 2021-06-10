@@ -28,19 +28,18 @@ $('.bt-remove').click(onRemove)
 
 /*************** 이벤트 콜백 *****************/
 function onCreate() {
-	var html
+	var html = ''
 	$listWrap.empty() //전체 삭제 후 추가
 	for(var i=0; i<prds.length; i++) {
-		html = '<li class="list card">' //처음은 =만 사용
+		html 	= '<li class="list card">'
 		html += '	<img class="card-img-top" src="'+prds[i].src+'" class="w-100">'
 		html += '	<div class="card-body">'
 		html += '		<h4 class="card-title">'+prds[i].title+'</h4>'
 		html += '		<p class="card-text">'+prds[i].desc+'</p>'
 		html += '	</div>'
 		html += '</li>'
-		$listWrap.append(html)
 	}
-	
+	$listWrap.append(html)
 }
 
 function onRemove() {
