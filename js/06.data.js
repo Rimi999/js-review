@@ -12,7 +12,7 @@ function init(){
 		{ id: 2, src: '../img/croissant.jpg', title: '맛있는 빵', desc: '빵'},
 		{ id: 3, src: '../img/popsicle.jpg', title: '맛있는 크림', desc: '크림'},
 		{ id: 4, src: '../img/salmon.jpg', title: '맛있는 연어', desc: '연어'},
-		{ id: 5, src: '../img/sandowich.jpg', title: '맛있는 샌드위치', desc: '샌드위치'},
+		{ id: 5, src: '../img/sandwich.jpg', title: '맛있는 샌드위치', desc: '샌드위치'},
 		{ id: 6, src: '../img/steak.jpg', title: '맛있는 스테이크', desc: '스테이크'},
 		{ id: 7, src: '../img/wine.jpg', title: '맛있는 와인', desc: '와인'},
 		{ id: 8, src: '../img/popsicle.jpg', title: '맛있는 크림', desc: '크림'}
@@ -29,12 +29,13 @@ $('.bt-remove').click(onRemove)
 /*************** 이벤트 콜백 *****************/
 function onCreate() {
 	var html
+	$listWrap.empty() //전체 삭제 후 추가
 	for(var i=0; i<prds.length; i++) {
 		html = '<li class="list card">' //처음은 =만 사용
-		html += '	<img class="card-img-top" src="../img/300.png">'
+		html += '	<img class="card-img-top" src="'+prds[i].src+'" class="w-100">'
 		html += '	<div class="card-body">'
-		html += '		<h4 class="card-title">Title</h4>'
-		html += '		<p class="card-text">Text</p>'
+		html += '		<h4 class="card-title">'+prds[i].title+'</h4>'
+		html += '		<p class="card-text">'+prds[i].desc+'</p>'
 		html += '	</div>'
 		html += '</li>'
 		$listWrap.append(html)
