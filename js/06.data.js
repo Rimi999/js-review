@@ -29,8 +29,8 @@ $('.bt-remove').click(onRemove)
 /*************** 이벤트 콜백 *****************/
 function onCreate() {
 	var html
-	for(var i=0; i<prds.length; i++ ) {
-		html = '<li class="list card">'
+	for(var i=0; i<prds.length; i++) {
+		html = '<li class="list card">' //처음은 =만 사용
 		html += '	<img class="card-img-top" src="../img/300.png">'
 		html += '	<div class="card-body">'
 		html += '		<h4 class="card-title">Title</h4>'
