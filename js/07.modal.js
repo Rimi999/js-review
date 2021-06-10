@@ -7,7 +7,7 @@ function init() {
 }
 
 /*************** 이벤트 등록 *****************/
-function () {
+function onSetTime() {
 	$('.modal-wrapper').show()
 }
 
